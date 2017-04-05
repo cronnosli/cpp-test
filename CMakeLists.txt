@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 project(cpp-test)
-
+add_compile_options(-std=c++14)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 function(add_challenge _CHALLENGE_NAME)

@@ -7,12 +7,12 @@ public:
 		: m_stars(stars)
 	{}
 
-	int stars() const
+	virtual int stars() const
 	{
 		return m_stars;
 	}
 
-	void stars(int n)
+	virtual void stars(int n)
 	{
 		m_stars = n;
 	}
@@ -21,7 +21,7 @@ private:
 	int m_stars;
 };
 
-class BlueSky : public Sky
+class BlueSky : virtual public Sky
 {
 public:
 	BlueSky(int stars = 0)
@@ -29,7 +29,7 @@ public:
 	{}
 };
 
-class NightSky : public Sky
+class NightSky : virtual public Sky
 {
 public:
 	NightSky(int stars = 0)
